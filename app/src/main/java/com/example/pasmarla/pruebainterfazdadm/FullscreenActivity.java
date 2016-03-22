@@ -7,10 +7,12 @@ import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.os.Handler;
+import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import org.w3c.dom.Text;
@@ -56,6 +58,9 @@ public class FullscreenActivity extends AppCompatActivity {
     private RadioButton norm;
     private RadioButton hard;
     private int position;
+    private int position2;
+    private RadioGroup Radiogp;
+    private int diff;
 
 
     @Override
@@ -134,6 +139,40 @@ public class FullscreenActivity extends AppCompatActivity {
 
 
 
+        position2=3;
+
+        Radiogp=(RadioGroup)findViewById(R.id.Radiogp);
+        Radiogp.setOnCheckedChangeListener(
+                new RadioGroup.OnCheckedChangeListener() {
+                    public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                        Log.d("Dwe","Elegiste:"+Integer.toString(checkedId));
+                        if(ez.isChecked()) {
+                            position2=5;
+                            Log.d("id", "facil");
+
+
+                        }
+                        if(norm.isChecked()) {
+                            position2=3;
+                            Log.d("id", "medio");
+
+
+                        }
+                        if(hard.isChecked()) {
+                            position2=1;
+                            Log.d("id", "dificil");
+
+                            }
+
+
+
+
+
+                    }
+                });
+
+
 
         back.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -152,8 +191,13 @@ public class FullscreenActivity extends AppCompatActivity {
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent mi_intent = new Intent(FullscreenActivity.this, MainActivity.class);
+                Intent mi_intent = new Intent(FullscreenActivity.this, Juego_breakout.class);
+                //ESCRITURA
+                final SharedPreferences preferencias = getSharedPreferences("diff",MODE_PRIVATE);
 
+                SharedPreferences.Editor editor=preferencias.edit();
+                editor.putInt("id2",position2 );
+                editor.commit();
 
                 finish();
                 startActivity(mi_intent);
@@ -166,6 +210,8 @@ public class FullscreenActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent mi_intent = new Intent(FullscreenActivity.this, record.class);
+
+
 
 
                 finish();

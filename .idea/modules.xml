@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/PruebainterfazDADM.iml" filepath="$PROJECT_DIR$/PruebainterfazDADM.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TRABAJODADM.iml" filepath="$PROJECT_DIR$/TRABAJODADM.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

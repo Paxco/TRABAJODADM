@@ -22,11 +22,17 @@
             android:name=".FullscreenActivity"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_fullscreen"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
         <activity
             android:name=".record"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_record"
+            android:theme="@style/FullscreenTheme" />
+        <activity android:name=".Juego_breakout" />
+        <activity
+            android:name=".introduce_record"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_introduce_record"
             android:theme="@style/FullscreenTheme"></activity>
     </application>
 
