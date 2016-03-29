@@ -52,12 +52,23 @@ public class MainActivity extends AppCompatActivity {
                 startActivity(mi_intent);
 
 
-                /*Intent mi_intent = new Intent(MainActivity.this, Set_records.class);
-
-                startActivity(mi_intent);*/
 
             }
         });
+
+        final Button pong = (Button) findViewById(R.id.pong);
+        pong.setOnClickListener(new View.OnClickListener() {
+            public void onClick(View v) {
+                Intent mi_intent2 = new Intent(MainActivity.this, pong.class);
+
+                startActivity(mi_intent2);
+
+
+            }
+        });
+
+
+
         spinner= (Spinner) findViewById(R.id.spinner);
         String[] Idiomas= {"Español","にほんご","English"};
         adaptador= new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item, Idiomas);

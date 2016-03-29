@@ -37,7 +37,12 @@
         <activity
             android:name=".Set_records"
             android:label="@string/title_activity_set_records"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".pong"
+            android:configChanges="orientation|keyboardHidden|screenSize"
+            android:label="@string/title_activity_pong"
+            android:theme="@style/FullscreenTheme"></activity>
     </application>
 
 </manifest>

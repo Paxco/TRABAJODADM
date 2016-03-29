@@ -13,4 +13,6 @@
     <string name="title_activity_introduce_record">introduce_record</string>
 
     <string name="title_activity_set_records">Set_records</string>
+
+    <string name="title_activity_pong">pong</string>
 </resources>

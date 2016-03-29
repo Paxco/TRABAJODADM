@@ -1,14 +1,11 @@
 package com.example.pasmarla.pruebainterfazdadm;
 
-/**
- * Created by Paxco on 23/03/2016.
- */
 import android.graphics.RectF;
-import android.util.Log;
 
-
-public class Jugador1 {
-
+/**
+ * Created by Paxco on 24/03/2016.
+ */
+public class Jugador2 {
     // RectF is an object that holds four coordinates - just what we need
     private RectF rect;
 
@@ -37,18 +34,17 @@ public class Jugador1 {
     // This the the constructor method
     // When we create an object from this class we will pass
     // in the screen width and height
-    public Jugador1(int screenX, int screenY){
+    public Jugador2(int screenX, int screenY){
         // 130 pixels wide and 20 pixels high
         length = 20;
         height = 130;
 
         // Start j1 in roughly the sceen centre
         y = screenY / 2;
-        x = screenX/10;
+        x = screenX*9/10;
         ymax=screenY;
 
         rect = new RectF(x, y, x + length, y + height);
-        Log.d("Estas", "creando rect");
 
         // How fast is the j1 in pixels per second
         j1Speed = 350;
@@ -70,14 +66,14 @@ public class Jugador1 {
     // contained in rect if necessary
     public void update(long fps){
         if(j1Moving == UP){
-            if(y>=ymax){y=0;}
+            if(y>=ymax*9/10){;}
 
             else y = y + j1Speed / fps;
 
         }
 
         if(j1Moving == DOWN){
-            if(y<=0){y=ymax;}
+            if(y<=ymax/15){}
 
 
             else y = y - j1Speed / fps;
@@ -87,9 +83,6 @@ public class Jugador1 {
         rect.top = y;
         rect.bottom = y + height;
     }
-
-
-
     // envia referencia
     public float posicion(){return y;}
 
