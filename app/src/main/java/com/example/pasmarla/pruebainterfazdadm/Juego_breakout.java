@@ -342,7 +342,7 @@ public class Juego_breakout extends AppCompatActivity {
                     editor.commit();
 
                     Intent mi_intent = new Intent(Juego_breakout.this, introduce_record.class);
-
+Log.d("acaba partida","");
                     finish();
                     startActivity(mi_intent);
                 }
@@ -372,7 +372,7 @@ public class Juego_breakout extends AppCompatActivity {
                 // Player has touched the screen
                 case MotionEvent.ACTION_DOWN:
                     paused = false;
-                    if(motionEvent.getX() > screenX / 2){
+                    if(motionEvent.getX() > paddle.posicion()){
                         paddle.setMovementState(paddle.RIGHT);
                       while(motionEvent.getX() == screenX / 2){ paddle.setMovementState(paddle.STOPPED);}
 

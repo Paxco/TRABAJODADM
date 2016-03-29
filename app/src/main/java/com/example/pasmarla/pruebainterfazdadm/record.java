@@ -175,7 +175,9 @@ public class record extends AppCompatActivity {
 
 
 //¿Existe el fichero? Si no existe crear con una entrada inicial
-        String a1 = "Dididalda            400"  + System.getProperty("line.separator") +"________________"+ System.getProperty("line.separator") + "Batman                200" + System.getProperty("line.separator")+"________________"+ System.getProperty("line.separator")+ "Paxco                 300" + System.getProperty("line.separator")+"________________"+ System.getProperty("line.separator");
+        String a1 = "Dididalda            400"  + System.getProperty("line.separator") +"________________"+ System.getProperty("line.separator") + "Batman                200"
+                + System.getProperty("line.separator")+"________________"+ System.getProperty("line.separator")+ "Paxco                 300"
+                + System.getProperty("line.separator")+"________________"+ System.getProperty("line.separator");
         if (!crearSiNoExiste(nomFichero, a1)) { //Volver a la actividad inicial tras indicar el error.
             Toast.makeText(this, "Problemas creando el fichero de puntuaciones", Toast.LENGTH_LONG).show();
             finish();

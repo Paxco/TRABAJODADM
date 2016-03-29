@@ -33,7 +33,11 @@
             android:name=".introduce_record"
             android:configChanges="orientation|keyboardHidden|screenSize"
             android:label="@string/title_activity_introduce_record"
-            android:theme="@style/FullscreenTheme"></activity>
+            android:theme="@style/FullscreenTheme" />
+        <activity
+            android:name=".Set_records"
+            android:label="@string/title_activity_set_records"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

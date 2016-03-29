@@ -82,5 +82,7 @@ public class Paddle {
         rect.left = x;
         rect.right = x + length;
     }
+    // envia referencia
+    public float posicion(){return x;}
 
 }
