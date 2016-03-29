@@ -47,14 +47,14 @@ public class MainActivity extends AppCompatActivity {
         final Button arka = (Button) findViewById(R.id.arka);
         arka.setOnClickListener(new View.OnClickListener() {
             public void onClick(View v) {
-                /*Intent mi_intent = new Intent(MainActivity.this, FullscreenActivity.class);
-
-                startActivity(mi_intent);*/
-
-
-                Intent mi_intent = new Intent(MainActivity.this, Set_records.class);
+                Intent mi_intent = new Intent(MainActivity.this, FullscreenActivity.class);
 
                 startActivity(mi_intent);
+
+
+                /*Intent mi_intent = new Intent(MainActivity.this, Set_records.class);
+
+                startActivity(mi_intent);*/
 
             }
         });

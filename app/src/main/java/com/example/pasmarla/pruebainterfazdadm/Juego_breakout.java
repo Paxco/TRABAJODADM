@@ -323,7 +323,7 @@ public class Juego_breakout extends AppCompatActivity {
                     paint.setTextSize(90);
                     canvas.drawText("YOU HAVE WON!", 10,screenY/2, paint);
 
-                    Intent mi_intent = new Intent(Juego_breakout.this, introduce_record.class);
+                    Intent mi_intent = new Intent(Juego_breakout.this, Set_records.class);
 
 
                     finish();
@@ -341,7 +341,7 @@ public class Juego_breakout extends AppCompatActivity {
                     editor.putInt("id3", score);
                     editor.commit();
 
-                    Intent mi_intent = new Intent(Juego_breakout.this, introduce_record.class);
+                    Intent mi_intent = new Intent(Juego_breakout.this,Set_records.class);
 Log.d("acaba partida","");
                     finish();
                     startActivity(mi_intent);

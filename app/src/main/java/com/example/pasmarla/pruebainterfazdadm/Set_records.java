@@ -203,24 +203,33 @@ public class Set_records extends AppCompatActivity {
         atras.setText(s_back);
         dif.setText(dif_s);
 
+        final  int score = 0;
+        final SharedPreferences preferencias2 = getSharedPreferences("scr",MODE_PRIVATE);
+        final int scr=preferencias2.getInt("id3", score);
+        Log.d("score:", Integer.toString(scr));
+
         //comparador
         //si la punuacion es maxima
-     /*   if(puntuacion[0]>scr){puntuacion[0]=scr;
+      /* if(Integer.parseInt(puntuacion[0])>scr){
+           puntuacion[0]=Integer.toString(scr);
             aux=0;
             insertar.setVisibility(View.VISIBLE);}
         //no es maxima pero es mayor que 2
-        else if(puntuacion[1]>scr){puntuacion[1]=scr;
+        else if(Integer.parseInt(puntuacion[1])>scr){
+           puntuacion[1]=Integer.toString(scr);
             aux=2;
             insertar.setVisibility(View.VISIBLE);}
 
-        else if(puntuacion[2]>scr){puntuacion[2]=scr;
+        else if(Integer.parseInt(puntuacion[2])>scr){
+           puntuacion[2]=Integer.toString(scr);
             aux=3;
             insertar.setVisibility(View.VISIBLE);}
 
         else{aux=4;
-            insertar.setVisibility(View.INVISIBLE);}
+            insertar.setVisibility(View.INVISIBLE);}*/
 
-*/
+
+
         atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
