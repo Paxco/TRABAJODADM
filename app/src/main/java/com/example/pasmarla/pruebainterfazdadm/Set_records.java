@@ -204,7 +204,7 @@ public class Set_records extends AppCompatActivity {
         dif.setText(dif_s);
 
         final  int score = 0;
-        final SharedPreferences preferencias2 = getSharedPreferences("scr",MODE_PRIVATE);
+        final SharedPreferences preferencias2 = getSharedPreferences("scr", MODE_PRIVATE);
         final int scr=preferencias2.getInt("id3", score);
         Log.d("score:", Integer.toString(scr));
 
@@ -229,12 +229,10 @@ public class Set_records extends AppCompatActivity {
             insertar.setVisibility(View.INVISIBLE);}*/
 
 
-
         atras.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent mi_intent = new Intent(Set_records.this, FullscreenActivity.class);
-
 
 
                 finish();
